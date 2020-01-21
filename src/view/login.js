@@ -1,4 +1,4 @@
-import  {autEmailPass} from '../models/auth.js';
+import  {autEmailPass,} from '../models/auth.js';
 
 const login =()=>{
     const email= document.getElementById('email_answer');
@@ -36,7 +36,7 @@ const formu = document.createElement("div");
 formu.setAttribute('id', 'form-signIn');// creamos el formulario
 //formu.action = "#/Home";
 //formu.method = "POST";
-const control = document.createElement["input"];// creamos un control
+//const control = document.createElement["input"];// creamos un control
 //control.setAttribute("type", "text");
 //control.setAttribute("name", "email_");
 // lo añadimos al form

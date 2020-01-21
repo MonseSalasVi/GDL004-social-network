@@ -1,21 +1,29 @@
-import {} from '../models/auth.js';
-const singup = ()=> {
-       
+import { createUser } from '../models/auth.js';
+const singup = () => {
+   // const suname = document.getElementById('su_name').value
+    //const sulastname = document.getElementById('su_lastname').value
     const suemail = document.getElementById('su_email').value
     const supassword = document.getElementById('su_password').value
-    console.log(suemail,supassword)
-} ;
+
+    if (suemail != "" || supassword != "") {
+        //console.log(sumail + supassword)
+        createUser(suemail, supassword)
+
+    }
+};
 //sing up
 export default () => {
     //ionput para nombre
     const inputsu_name = document.createElement("input");
     inputsu_name.innerHTML = "su_name";
     inputsu_name.setAttribute("placeholder", "First name")
+    inputsu_name.setAttribute("id", "su_name");
     document.body.appendChild(inputsu_name);
     //input para apellido
     const inputsu_lastname = document.createElement("input");
     inputsu_lastname.innerHTML = "su_lastname";
     inputsu_lastname.setAttribute("placeholder", "First lastname")
+    inputsu_lastname.setAttribute("id", "su_lastname");
     document.body.appendChild(inputsu_lastname);
     //input para email
     const inputsu_email = document.createElement("input");
@@ -43,6 +51,7 @@ export default () => {
     divsingup.appendChild(inputsu_lastname);
     divsingup.appendChild(inputsu_email);
     divsingup.appendChild(inputsu_password);
+    divsingup.appendChild(btn);
     document.body.appendChild(divsingup);
 
     return divsingup;
