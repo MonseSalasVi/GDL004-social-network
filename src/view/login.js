@@ -10,7 +10,7 @@ const login =()=>{
     } 
 }
 
-
+// login
 export default () => {
 const inputEmail = document.createElement("INPUT");
 inputEmail.innerHTML = "email";
@@ -46,8 +46,6 @@ formu.appendChild(btn);
 document.body.appendChild(formu);
  
 
-  
-
 return formu; //añadimos el formulario...
  /*
 
@@ -56,6 +54,8 @@ const divElemt = document.createElement('div');
 divElemt.innerHTML = viewLogin;
 return divElemt;
 */
+// singup Monse
+
    
 };
 

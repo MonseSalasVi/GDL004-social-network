@@ -27,27 +27,11 @@
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jest": "^23.6.0",
     "htmlhint": "^0.11.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 42b9b35f87b036eac9db44bec57a4aa09546215b
-    "jest": "^24.8.0",
-    "regenerator-runtime": "^0.13.1",
-    "serve": "^11.0.2",
-    "stylelint": "^10.1.0",
-    "stylelint-config-recommended": "^2.2.0"
-<<<<<<< HEAD
-=======
     "jest": "^24.9.0",
     "regenerator-runtime": "^0.13.3",
     "serve": "^11.3.0",
     "stylelint": "^13.0.0",
     "stylelint-config-recommended": "^3.0.0"
->>>>>>> 843522326466566c83dcc9ea449004a496ecf2c3
-=======
-
->>>>>>> 42b9b35f87b036eac9db44bec57a4aa09546215b
   },
   "directories": {
     "test": "test"
