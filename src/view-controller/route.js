@@ -27,7 +27,6 @@ const changeView = (route) => {
 
         default: {
             return container.appendChild(components.login()) }
-        //{ return container.appendChild( components.login())}
     }
 
     return null;

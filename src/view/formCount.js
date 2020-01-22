@@ -29,12 +29,14 @@ export default () => {
     const inputsu_email = document.createElement("input");
     inputsu_email.innerHTML = "su_email";
     inputsu_email.setAttribute("placeholder", "Email address")
+    inputsu_email.setAttribute("type", "email")
     inputsu_email.setAttribute("id", "su_email");
     document.body.appendChild(inputsu_email);
     //input para contrase;a
     const inputsu_password = document.createElement("input");
     inputsu_password.innerHTML = "su_password";
     inputsu_password.setAttribute("placeholder", "Email address")
+    inputsu_password.setAttribute("type", "password")
     inputsu_password.setAttribute("id", "su_password");
     document.body.appendChild(inputsu_password);
     //boton para regristarse
