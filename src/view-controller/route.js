@@ -1,8 +1,5 @@
-import {
-    components
-} from '../view/index.js';
-
-
+import { components } from '../view/index.js';
+//import  {login } from '../view/login.js';
 const changeView = (route) => {
     const container = document.getElementById('container')
     container.innerHTML = "";
@@ -10,19 +7,18 @@ const changeView = (route) => {
     // formCreate.innerHTML ='';
     // login()
 
-    switch (route) {
+    switch (route ) {
+       
         case "#/FormCount":
             container.appendChild(components.formCount())
-            break;
+            break;    
         case "#/Home":
-            container.appendChild(components.home())
-            break;
-        case "#/Profile":
-            container.appendChild(components.profile())
-            break;
-        case "#/EditProfile":
-            container.appendChild(components.editProfile())
-            break;
+              container.appendChild(components.home())
+        break;
+        case "#/Profile": container.appendChild( components.profile())
+        break;
+        case "#/EditProfile": container.appendChild( components.editProfile())
+        break;
 
 
         default: {

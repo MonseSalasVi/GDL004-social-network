@@ -1,15 +1,18 @@
-import {
-  headerMenu
-  //funciones
-} from './commonElements.js';
 
+import {navbar} from './commonElements.js';
+import {headerMenu} from './commonElements.js';
 
 export default () => {
-  const container = document.createElement("div");
-  headerMenu();
-  `<h1> Hola</h1>`
+  
+  const divElem = document.createElement('div');
+  divElem.setAttribute("class", "view_component");
+ // container.body.appendChild(divElem);
+ divElem.innerHTML ="Soy el HOME"
+ document.innerHTML = headerMenu();
+  
+  document.innerHTML = navbar();
 
-
-
-  return container;
-}
+  
+  return divElem;
+   
+};
