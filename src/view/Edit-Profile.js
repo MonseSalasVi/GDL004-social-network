@@ -1,5 +1,5 @@
 export default () => {
-    const viewEditProfile = `<h2> ¡Soy el Edit-Profile </h2>
+  const viewEditProfile = `<h2> ¡Soy el Edit-Profile </h2>
     <figure> <img src="/" alt="Edit-profile"> </figure>
     
     <div class='container'>
@@ -31,8 +31,8 @@ export default () => {
         
     </div>`
 
-    const divElem = document.createElement('div')
-    divElem.innerHTML = viewEditProfile;
+  const divElem = document.createElement('div')
+  divElem.innerHTML = viewEditProfile;
 
-    return divElem;
+  return divElem;
 }
