@@ -84,6 +84,16 @@ li {
 .hide {
     display: none;
 }
+.mjs {
+	text-align: center;
+}
+/* Trabajando erororessss*/
+#formError{
+  color:yellow;
+  font-family: 'Ubuntu', sans-serif;
+  padding: 1px;
+}
+
 
 /* ---------------------------------------------------------*/
 @media only screen and (max-width: 600px) {
