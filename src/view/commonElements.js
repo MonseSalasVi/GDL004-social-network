@@ -1,9 +1,11 @@
 function singUpForm () {
-  history.pushState(null, null, "#/FormCount");
+  location.hash = "#/FormCount"; 
+  //history.pushState(null, null, "#/FormCount");
     // window.history.go();
 }
 function logInForm () {
-  history.pushState(null, null, "#/Login");
+  location.hash = "#/Login"; 
+  //history.pushState(null, null, "#/Login");
     // window.history.go();
 }
 const btnSingInUp = () => {
