@@ -1,6 +1,7 @@
 import {
   autEmailPass,
   sing_socialNewtwork
+  
 } from '../models/auth.js';
 import {
   btnSingInUp
@@ -21,12 +22,11 @@ const login = () => {
     if (email.length < 4 || "") {
       document.getElementById("email_answer").style.borderColor = "yellow";
       errorSpan.innerHTML = "Your email is incorrect";
-
-      //return;
+      
     } else if (password.length < 4 || "") {
       document.getElementById("password_answer").style.borderColor = "yellow";
       errorSpan.innerHTML = "Your password is incorrect";
-      //return;
+ 
     } else if (email != "" && password != "") {
       autEmailPass(email, password)
 

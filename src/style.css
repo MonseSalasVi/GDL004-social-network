@@ -103,18 +103,14 @@ li {
 
     
 }
-
-
-
-
-.modal_ing_in {
+.signOut{
+  display: none;
 
 }
 
-/* botones del sing up */
-.btn_sing_in button {
 
-}
+
+
 
 
 /*modal sing up */
@@ -149,11 +145,6 @@ li {
 .profile_information {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 5(1fr);
-
-}
-
-
-.profile_description {
 
 }
 

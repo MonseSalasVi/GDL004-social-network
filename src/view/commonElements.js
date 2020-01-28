@@ -1,10 +1,10 @@
 function singUpForm () {
-  history.pushState("formCount.js", "formCount", "#/FormCount");
-    window.history.go();
+  history.pushState(null, null, "#/FormCount");
+    // window.history.go();
 }
 function logInForm () {
-  history.pushState("login.js", "login", "#/Login");
-    window.history.go();
+  history.pushState(null, null, "#/Login");
+    // window.history.go();
 }
 const btnSingInUp = () => {
     

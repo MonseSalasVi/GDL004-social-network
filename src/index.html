@@ -1,42 +1,46 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="./561153-web-essentials/font/flaticon.css">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 
-    <title>social-network</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="./561153-web-essentials/font/flaticon.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
 
-  <body>
-    
+  <title>social-network</title>
+</head>
+
+<body>
+
   <!--<span id="formError"></span> -->
-      <main class="main_container">
-        <section id="container"></section>
-      </main>
-     
-      <!-- Trigger/Open The Modal -->
-      <button id="myBtn">Open Modal</button>
+  <main class="main_container">
+    <section id="container"></section>
+  </main>
 
-      <!-- The Modal -->
-      <div id="myModal" class="modal">
+  <!-- Trigger/Open The Modal -->
+  <button id="myBtn">Open Modal</button>
 
-        <!-- Modal content -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <p>Soy el Post </p>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
 
-</div> 
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Soy el Post </p>
 
-    
-  <script type="module" src="./main.js"></script>
-  <script type="module" src="./index.js"></script>
+    </div>
+    <!--<div id=menu >
+      <button onclick= "signOut()" id= "signOut"></button>
+    </div>
+  -->
 
-    
-    
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./index.js"></script>
+
+
+
 </body>
 
 
@@ -63,7 +67,7 @@
   };
   // Initialize Firebase
   var proyect = firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+  //firebase.analytics();
 </script>
 
 </html>

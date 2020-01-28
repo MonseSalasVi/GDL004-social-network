@@ -1,5 +1,6 @@
 import {navbar} from './commonElements.js';
 import {headerMenu} from './commonElements.js';
+import { autEmailPass, signOutU} from '../models/auth.js';
 export default () => {
     const viewProfile = `
     
@@ -32,13 +33,18 @@ export default () => {
 const divElem = document.createElement('div');
 divElem.setAttribute("class", "view_component");
 // container.body.appendChild(divElem);
+const divsignOut= document.createElement('div');
+divsignOut.setAttribute("class","divsignOut")
+const btnsignOut = document.createElement("BUTTON");
+btnsignOut.onclick = signOutU;
+btnsignOut.innerHTML= "SALIRRRRR"
+divsignOut.appendChild(btnsignOut);
 divElem.innerHTML ="Soy el Profile"
 document.innerHTML = headerMenu();
-
+divElem.appendChild(divsignOut)
 document.innerHTML = navbar();
 
 
 return divElem;
-    divElemt.innerHTML = viewProfile;
-    return divElemt;
+  
 };
