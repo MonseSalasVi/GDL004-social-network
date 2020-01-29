@@ -1,13 +1,13 @@
 import {
   autEmailPass,
-  sing_socialNewtwork
+  sing_socialNewtwork,
   
 } from '../models/auth.js';
 import {
   btnSingInUp
 } from './commonElements.js';
 
-
+var provider = new firebase.auth.GoogleAuthProvider();
 
 const login = () => {
   const errorSpan = document.getElementById("formError");
@@ -28,6 +28,7 @@ const login = () => {
       errorSpan.innerHTML = "Your password is incorrect";
  
     } else if (email != "" && password != "") {
+      
       autEmailPass(email, password)
 
     }
@@ -36,11 +37,22 @@ const login = () => {
 }
 const singGoogle = () => {
   console.log("konda")
-  const provider = new firebase.auth.GoogleAuthProvider();
-  //provider = new firebase.auth.GoogleAuthProvider();
-  sing_socialNewtwork(provider)
-  history.pushState("home.js", "home", "#/Home");
-  window.history.go();
+ firebase.auth().signInWithPopup(provider).then(function(result) {
+  // This gives you a Google Access Token. You can use it to access the Google API.
+  var token = result.credential.accessToken;
+  // The signed-in user info.
+  var user = result.user;
+  // ...
+}).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // The email of the user's account used.
+  var email = error.email;
+  // The firebase.auth.AuthCredential type that was used.
+  var credential = error.credential;
+  // ...
+});
 
 }
 export default () => {

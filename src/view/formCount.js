@@ -1,5 +1,5 @@
 import {
-  createUser
+  createUser, 
 } from '../models/auth.js';
 import {
   btnSingInUp
@@ -21,21 +21,11 @@ const singup = () => {
       document.getElementById("su_password").style.borderColor = "yellow";
     }
     console.log(suemail + supassword)
-  
     createUser(suemail, supassword)
+    
     
     }
 
-
-      //   if (suemail != "" || supassword != "") {
-
-      //     document.getElementById("suemail").style.borderColor = "yellow";
-      //     errorSpan.innerHTML = "Your email is incorrect";
-      //     console.log(suemail + supassword)
-      //     createUser(suemail, supassword)
-      //   }
-      // };
-      //sing up
       export default () => {
         //ionput para nombre
         const titleSingUp = document.createElement("h1");

@@ -1,37 +1,54 @@
 //quien esta logeado
 
-  firebase.auth().onAuthStateChanged(function(user) {
-  
+firebase.auth().onAuthStateChanged(function (user) {
+
   if (user) {
     // User is signed in.
-    var displayName = user.displayName;
+    var name = user.displayName;
     var email = user.email;
     var emailVerified = user.emailVerified;
     var photoURL = user.photoURL;
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
     var providerData = user.providerData;
-    location.hash = "#/Home"; 
-    console.log("estas logeado" + email)
-  } else if(!user){
-    location.hash = "#/Login";  
-  
-    console.log("no estas logiueado"+ email)
-  } else{  
-    location.hash = "#/FormCount";  
-  
-    console.log("no estas logiueado"+ email)
+    //Agregar usuario a la coleccion de data
+    db.collection("users").add({
+        name: "",
+        userEmail: email,
+        photoURL: photoURL
+      })
+      .then(function (docRef) {
+        console.log("Document written with ID: ", docRef.id);
+      })
+      .catch(function (error) {
+        console.error("Error adding document: ", error);
+      });
+
+
+    location.hash = "#/Home";
+    console.log(user)
+    console.log("estas logeado" + name + email)
+  } else if (!user) {
+    location.hash = "#/Login";
+    console.log("no estas logueado" + email)
+  } else {
+    location.hash = "#/FormCount";
+    console.log("no estas logueado" + email)
   }
-  
 });
+
 
 //crear cuenta con tu email y password
 function createUser(suemail, supassword) {
-  firebase.auth().createUserWithEmailAndPassword(suemail, supassword).catch(function (error) {
-    let errorCode = error.code;
-    let errorMessage = error.message;
-  
-  });
+  firebase.auth().createUserWithEmailAndPassword(suemail, supassword).then(function () {
+
+
+    })
+    .catch(function (error) {
+      let errorCode = error.code;
+      let errorMessage = error.message;
+    })
+
 }
 
 function autEmailPass(email, password) {
@@ -49,7 +66,7 @@ function autEmailPass(email, password) {
         alert(errorMessage);
       }
       //console.log(error);
- 
+
     });
 }
 
@@ -73,15 +90,15 @@ function sing_socialNewtwork(provider) {
     });
 }
 
-function signOutU(){
+function signOutU() {
   console.log("salteee Prroo")
   firebase.auth().signOut()
-  .then(function(){
+    .then(function () {
       console.log("salte pa fuera")
     })
-  .catch(function (error){
-  console.log(error)
-  });
+    .catch(function (error) {
+      console.log(error)
+    });
 
 }
 
@@ -91,5 +108,5 @@ export {
   autEmailPass,
   createUser,
   sing_socialNewtwork,
-  signOutU
+  signOutU,
 }
