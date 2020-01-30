@@ -4,7 +4,8 @@ import {
   
 } from '../models/auth.js';
 import {
-  btnSingInUp
+  btnSingInUp,
+  enabled
 } from './commonElements.js';
 
 var provider = new firebase.auth.GoogleAuthProvider();
@@ -80,7 +81,8 @@ export default () => {
   btn.onclick = login;
   btn.setAttribute('id', 'btn_sing_in');
   btn.setAttribute('class', 'btn')
-  document.body.appendChild(btn);
+
+  //document.body.appendChild(btn);
 
   //div con boton entrar con google
   const btngoogle = document.createElement("BUTTON")
@@ -97,31 +99,25 @@ export default () => {
   divbtns.appendChild(btngoogle);
   const container = document.createElement("section");
   container.setAttribute("class", "container_grid_login");
+   // creamos el formulario
   const formu = document.createElement("div");
-  formu.setAttribute('id', 'form-signIn'); // creamos el formulario
+  formu.setAttribute('id', 'form-signIn');
   formu.setAttribute("class", "login_container form__group")
-  
   formu.appendChild(welcomeName);
   formu.appendChild(inputEmail);
   formu.appendChild(inputPassword);
   formu.appendChild(diverror)
   formu.appendChild(btn);
+  //divbtns.innerHTML = ""
   formu.appendChild(divbtns)
-
-
   container.appendChild(formu);
   document.body.appendChild(container)
 
-  // const message = document.createElement("div")
-  // message.setAttribute("id", "alert")
-  // const text = document.createElement("p")
-  // text.setAttribute("id", "textoAlert")
-  // text.innerHTML = "constesta las cuadros de amarillo"
-  // message.appendChild(text)
-  // document.boddy.appendChild(message)
-
+if (!enabled) {
   btnSingInUp();
-
+}
+ 
+ btnSingInUp.innerHTML = ""
   return container; //añadimos el formulario...
 
 };

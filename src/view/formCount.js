@@ -60,12 +60,12 @@ const singup = () => {
         inputsu_password.setAttribute("class", "inputs");
         document.body.appendChild(inputsu_password);
         //boton para regristarse
-        const btn = document.createElement("BUTTON");
-        btn.innerHTML = "Sing up";
-        btn.onclick = singup;
-        btn.setAttribute('id', 'btn_sing_up');
-        btn.setAttribute('class', 'btn')
-        document.body.appendChild(btn);
+        // const btn = document.createElement("BUTTON");
+        // btn.innerHTML = "Sing up";
+        // btn.onclick = singup;
+        // btn.setAttribute('id', 'btn_sing_up');
+        // btn.setAttribute('class', 'btn')
+        // document.body.appendChild(btn);
         //div error
         const diverror = document.createElement("span")
         diverror.setAttribute("id", "formError")
@@ -74,6 +74,7 @@ const singup = () => {
         const divsingup = document.createElement("div");
         divsingup.setAttribute('id', 'divsingup');
         divsingup.setAttribute("class", "login_container");
+
         const container = document.createElement("section");
         divsingup.appendChild(titleSingUp);
         divsingup.appendChild(inputsu_name);
@@ -81,10 +82,12 @@ const singup = () => {
         divsingup.appendChild(inputsu_email);
         divsingup.appendChild(inputsu_password);
         divsingup.appendChild(diverror)
-        divsingup.appendChild(btn);
+        //divsingup.appendChild(btn);
         container.appendChild(divsingup)
-        document.body.appendChild(container);
         container.setAttribute("class", "container_grid_login");
-        btnSingInUp();
+        document.body.appendChild(container);
+        //btnSingInUp();
+        btnSingInUp.innerHTML = ""
         return container;
       };
+      
