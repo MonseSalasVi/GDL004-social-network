@@ -18,7 +18,7 @@ firebase.auth().onAuthStateChanged(function (user) {
         photoURL: photoURL
       })
       .then(function (docRef) {
-        console.log("Document written with ID: ", docRef.id);
+        //console.log("Document written with ID: ", docRef.id);
       })
       .catch(function (error) {
         console.error("Error adding document: ", error);
@@ -26,14 +26,10 @@ firebase.auth().onAuthStateChanged(function (user) {
 
 
     location.hash = "#/Home";
-    console.log(user)
-    console.log("estas logeado" + name + email)
   } else if (!user) {
     location.hash = "#/Login";
-    console.log("no estas logueado" + email)
   } else {
     location.hash = "#/FormCount";
-    console.log("no estas logueado" + email)
   }
 });
 
@@ -76,32 +72,24 @@ function sing_socialNewtwork(provider) {
   firebase.auth().getRedirectResult().then(function (result) {
       if (result.credential) {
         let token = result.credential.accessToken;
-
       }
       let user = result.user;
-
     })
     .catch(function (error) {
       let errorCode = error.code;
       let errorMessage = error.message;
       let email = error.email;
-      let credential = error.credential;
-
+      let credential = error.credential
     });
 }
-
-function signOutU() {
-  console.log("salteee Prroo")
+function signOutU() {  
   firebase.auth().signOut()
     .then(function () {
-      console.log("salte pa fuera")
     })
     .catch(function (error) {
-      console.log(error)
+      //console.log(error)
     });
-
 }
-
 
 
 export {
