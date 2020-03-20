@@ -56,7 +56,7 @@ function autEmailPass(email, password) {
       var errorCode = error.code;
       var errorMessage = error.message;
       if (errorCode === 'auth/wrong-password') {
-        errorSpan.innerHTML = "Your email is incorrect";
+        //errorSpan.innerHTML = "Your email is incorrect";
         //alert('Wrong password.');
       } else {
         alert(errorMessage);

@@ -8,7 +8,7 @@ const btnSingInUp = () => {
   btnSingIn.onclick = logInForm;
   //document.body.appendChild(btnSingIn);
   const btnSingUp = document.createElement("BUTTON");
-  btnSingUp.innerHTML = "Sing Up";
+  btnSingUp.innerHTML = "Sign Up";
   btnSingUp.setAttribute('id', 'btn_sing_up');
   btnSingUp.setAttribute('class', 'btn_primary ');
   btnSingUp.onclick = singUpForm;

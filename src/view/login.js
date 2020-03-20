@@ -37,7 +37,7 @@ const login = () => {
 
 }
 const singGoogle = () => {
-  console.log("konda")
+  //console.log("konda")
  firebase.auth().signInWithPopup(provider).then(function(result) {
   // This gives you a Google Access Token. You can use it to access the Google API.
   var token = result.credential.accessToken;
@@ -86,7 +86,7 @@ export default () => {
 
   //div con boton entrar con google
   const btngoogle = document.createElement("BUTTON")
-  btngoogle.innerHTML = "Sing in with GoogleChrome";
+  btngoogle.innerHTML = "Sign in with Google Chrome";
   btngoogle.onclick = singGoogle;
   btngoogle.setAttribute('id', 'btn_sing_in_google');
   btngoogle.setAttribute('class', 'btn')

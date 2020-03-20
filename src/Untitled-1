@@ -13,7 +13,7 @@
           <br>
           <label> <input type="checkbox" checked="checked" name="remember"> Remember me </label>
         </form>
-        <button id="sing_in" type="submit"> Sing in </button>
+        <button id="sing_in" type="submit"> Sign in </button>
         <button id="sing_in_chrome" type="submit"> Sing in with GoogleChrome</button>
       </div>
         <button id="new_account" typpe="submit" onclick="document.getElementById('contain_sing_up').style.display='block'>New account </button>

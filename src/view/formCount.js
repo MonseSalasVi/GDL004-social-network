@@ -29,7 +29,7 @@ const singup = () => {
       export default () => {
         //ionput para nombre
         const titleSingUp = document.createElement("h1");
-        titleSingUp.innerHTML = "Sing Up"
+        titleSingUp.innerHTML = "Sign Up"
         const inputsu_name = document.createElement("input");
         inputsu_name.innerHTML = "su_name";
         inputsu_name.setAttribute("placeholder", "First name")
