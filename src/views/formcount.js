@@ -5,32 +5,28 @@ export default () => {
     //input name
     const count_name = document.createElement('input')
     count_name.innerHTML = 'name'
-    count_name.setAttribute('placeholder', 'name')
+    count_name.setAttribute('placeholder', 'Name')
     count_name.setAttribute('class', 'inputs')
     //input mail
     const count_mail = document.createElement('input')
-    count_mail.setAttribute('placeholder', 'mail')
+    count_mail.setAttribute('placeholder', 'Mail')
     count_mail.setAttribute('class', 'inputs')
     //inout contrase;a
     const count_password = document.createElement('input')
-    count_password.setAttribute('placeholder', 'password')
+    count_password.setAttribute('placeholder', 'Password')
     count_password.setAttribute('type', 'password')
     count_password.setAttribute('class', 'inputs')
 
-    //div de botones
-
+    // boton
     const btnSU = document.createElement('button')
     btnSU.innerHTML = 'SingUp'
-    btnSU.setAttribute('class', 'btnsform')
-    const btnSI = document.createElement('button')
-    btnSI.innerHTML = 'SingIn'
-    btnSI.setAttribute('class', "btnsform")
+    btnSU.setAttribute('class', "btnform")
 
     //almacena los btns
     const divbtn = document.createElement('div')
     divbtn.setAttribute('class', 'divbtns')
     divbtn.appendChild(btnSU)
-    divbtn.appendChild(btnSI)
+
 
     //almacenando todo
     const divform = document.createElement('div')
@@ -40,6 +36,7 @@ export default () => {
     divform.appendChild(count_mail)
     divform.appendChild(count_password)
     divform.appendChild(divbtn)
+
 
 
 
