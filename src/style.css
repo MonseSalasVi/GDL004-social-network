@@ -1,4 +1,20 @@
-/* @media only screen and (max-width: 600px) { */
+/* @media only screen and (max-width: 600px) { 
+    https://colors.muz.li/palette/c2c2ff/8892b3/f0f4ff/e1e8ff/ffffff */
+
+.header {
+    background: #e1e8ff;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    padding: 3%
+}
+
+.divform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .divform {
     display: flex;
     flex-direction: column;
