@@ -6,7 +6,9 @@
     overflow: hidden;
     top: 0;
     width: 100%;
-    padding: 3%
+    padding: 3%;
+    display:flex;
+    justify-content:space-between;
 }
 
 .divform {
@@ -54,3 +56,29 @@
     margin-top: 20%;
     color: #8892b3
 }
+
+
+/* area del home*/
+.post_titulo{
+    display:flex;
+     flex-direction:column;
+      justify-content:center;
+    line-height: 0.1;
+    background: yellow;
+    
+  }
+  .post{
+    padding: 1%;
+    background: #e1e8ff;
+    display:flex;
+      justify-content:center;
+    flex-direction:column;
+  
+  }
+  .post_footer{
+    background:#f0f4ff;
+  }
+  
+  .fotter_private{
+    background:#8892b3;
+  }

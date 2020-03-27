@@ -1,3 +1,5 @@
+import {log_in} from '../auth/signup.js'
+
 export default () => {
     //texto
     const count_title = document.createElement('h1')
@@ -19,6 +21,7 @@ export default () => {
     const btnLI = document.createElement('button')
     btnLI.innerHTML = 'Log in'
     btnLI.setAttribute('class', "btnform")
+    btnLI.addEventListener('click', log_in)
 
     //almacena los btns
     const divbtn = document.createElement('div')

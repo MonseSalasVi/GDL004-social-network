@@ -46,7 +46,7 @@ export default () => {
 
     //error
     // const diverror = document.createElement("span")
-    //     diverror.setAttribute("id", "formError")
+    //  diverror.setAttribute("id", "formError")
     
     //almacenando todo
     const divform = document.createElement('div')
