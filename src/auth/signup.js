@@ -6,10 +6,13 @@ const createUser = (e) => {
   const password = parent.querySelector('[name=password]').value
 
   firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then(function () {})
+    .then(function (res) {
+      console.log(res, 'Hola')
+    })
     .catch(function (error) {
       let errorCode = error.code;
       let errorMessage = error.message;
+      console.log(errorCode, errorMessage)
     })
 
 }
@@ -23,8 +26,6 @@ const log_in = (e) => {
     var errorMessage = error.message;
   });
 }
-
-
 
 const log_out = (e) => {
   firebase.auth().signOut()

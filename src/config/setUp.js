@@ -3,9 +3,9 @@ import initFirebase from './initFirebase.js';
 function setUp(){
     
     initFirebase();
-
+    firebase.firestore();
     firebase.auth().onAuthStateChanged(function (user) {
-
+    
         if (user) {
           // User is signed in.
           const name = user.displayName;
@@ -19,8 +19,9 @@ function setUp(){
         } else if (!user) {
           location.hash = "#/Login";
         } else {
-          location.hash = "#/FormCount";
+          location.hash = "#/FormCount";  
         }
+        
       });
       
 }

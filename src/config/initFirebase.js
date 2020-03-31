@@ -1,3 +1,5 @@
+//let db = null;
+
 const initFirebase = () => {
     const firebaseConfig = {
         apiKey: "AIzaSyBBLAUkFHgKSXU7m1fBZNKUQMcY0uuI5Jw",
@@ -11,7 +13,9 @@ const initFirebase = () => {
       };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
-      // firebase.analytics();
+      firebase.analytics();
+      //db = firebase.firestore();
 }
 
+//export const dbFirebase = db;
 export default initFirebase;

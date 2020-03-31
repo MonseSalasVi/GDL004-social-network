@@ -22,15 +22,21 @@ export default () => {
 
     const containerProfile = document.createElement('div');
     containerProfile.setAttribute('class', "containerProfile")
-
-    const btn_logOut = document.createElement('button');
+    //boton para salir
+    const btn_logOut = document.createElement('button')
     btn_logOut.addEventListener('click', log_out)
     btn_logOut.innerHTML = 'SALIR'
+
+    //boton para el post
+    const new_post = document.createElement('a')
+    new_post.setAttribute('href', '#/EditPost')
+    new_post.innerHTML = 'NewPost'
 
 
     containerProfile.appendChild(menu)
     containerProfile.appendChild(btn_logOut)
+    containerProfile.appendChild(new_post)
 
-    document.body.appendChild(containerProfile);
+    document.body.appendChild(containerProfile)
     return containerProfile;
 }

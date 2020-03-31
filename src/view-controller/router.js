@@ -19,7 +19,7 @@ const changeView = (route) => {
             container.appendChild(components.profile())
             break;
         case "#/EditPost":
-            //container.appendChild(components.editpost())
+            container.appendChild(components.editpost())
             break;
 
     }
