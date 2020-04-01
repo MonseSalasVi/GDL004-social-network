@@ -38,6 +38,8 @@ export default () => {
     const post_textarea = document.createElement('textarea')
     post_textarea.setAttribute('class', 'post_textarea')
     post_textarea.setAttribute('placeholder', '......')
+    post_textarea.setAttribute('id','post_textarea')
+
     //div que contiene el textarea
     const post_container = document.createElement('div')
     post_container.setAttribute('class', 'post_container')
