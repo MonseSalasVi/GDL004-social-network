@@ -54,14 +54,15 @@
 /* postss*/
 .post {
   padding: 2%;
-  background: #c2d1ff;
+  margin: 5px;
+  background: #e1e8ff;
   display: flex;
   justify-content: center;
   flex-direction: column;
   height: auto;
   width: 40%;
   border-radius: 8px;
-  border: 2px solid #5a658c;
+  border: 1px solid #5a658c;
 }
 .post_titulo {
   display: flex;
@@ -93,7 +94,7 @@
 .post_textarea {
   height: 150px;
   width: 100%;
-  background: #e1e8ff;
+  
   font-size: 15px;
   border-radius: 8px;
   border: 4px solid #e1e8ff;
@@ -106,6 +107,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 20px;
 
 }
 
@@ -172,15 +174,16 @@
 
   /*nuevo post */
   .post {
+    margin: 5px;
     padding: 2%;
-    background: #c2d1ff;
+    background: #e1e8ff;
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 100%;
-    width: auto;
+    width: 80%;
     border-radius: 8px;
-    border: 2px solid #5a658c;
+    border: 1px solid #5a658c;
 
   }
 
@@ -214,7 +217,7 @@
   .post_textarea {
     height: 150px;
     width: 100%;
-    background: #e1e8ff;
+  
     font-size: 15px;
     border-radius: 8px;
     border: 4px solid #e1e8ff;

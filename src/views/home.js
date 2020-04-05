@@ -1,4 +1,7 @@
-import createpost from '../database/post.js'
+import postMethod from '../database/post.js';
+const  {createpost, historypost} = postMethod;
+
+
 export default () => {
     //menu
     const menu = document.createElement('nav')
@@ -19,13 +22,13 @@ export default () => {
 
     //name
     const post_name = document.createElement('h1')
-    post_name.innerHTML = 'Mi nombre'
+    post_name.innerHTML = 'email_user'
     //fecha
     const post_date = document.createElement('p')
     post_date.innerHTML = '25/02/2020'
     const btn_delete = document.createElement('button')
     btn_delete.setAttribute('class', 'btn_delete')
-    btn_delete.innerHTML = 'Delete'
+    btn_delete.innerHTML = 'X'
     //div del titulo del post
     const post_titulo = document.createElement('div')
     post_titulo.setAttribute('class', 'post_titulo')
@@ -38,7 +41,7 @@ export default () => {
     const post_textarea = document.createElement('textarea')
     post_textarea.setAttribute('class', 'post_textarea')
     post_textarea.setAttribute('placeholder', '......')
-    post_textarea.setAttribute('id','post_textarea')
+    post_textarea.setAttribute('id', 'post_textarea')
 
     //div que contiene el textarea
     const post_container = document.createElement('div')
@@ -74,6 +77,9 @@ export default () => {
     post_footer.appendChild(div_private)
     post_footer.appendChild(btn_guardar)
 
+    const containerPosts = document.createElement('div')
+    historypost().then((listElements) => {   
+    })
 
     //div post 
     const post = document.createElement('div')
@@ -83,6 +89,16 @@ export default () => {
     post.appendChild(post_container)
     post.appendChild(post_footer)
 
+    //contenedor de post pasados
+    const history = document.createElement('div')
+    history.setAttribute('class','history')
+    history.setAttribute('id','history')
+    // history.appendChild(post)
+
+    //Esto son otros posst//
+    //const historypost = document.createElement(div)
+
+
 
     const containerHome = document.createElement('div');
     containerHome.setAttribute('class', "containerHome")
@@ -90,5 +106,7 @@ export default () => {
 
     containerHome.appendChild(menu)
     containerHome.appendChild(post)
+    containerHome.appendChild(containerPosts)
+    
     return containerHome;
 }

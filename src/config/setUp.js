@@ -9,7 +9,7 @@ function setUp(){
         if (user) {
           // User is signed in.
           const name = user.displayName;
-          const email = user.email;
+          const email_user = user.email;
           const emailVerified = user.emailVerified;
           const photoURL = user.photoURL;
           const isAnonymous = user.isAnonymous;
