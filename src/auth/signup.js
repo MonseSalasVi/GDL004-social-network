@@ -54,10 +54,15 @@ const log_out = (e) => {
     .catch(function (error) {})
 }
 
-
+function get_user(cb){
+  firebase.auth().onAuthStateChanged((user) => {
+    cb(user);
+  });
+}
 
 export {
   createUser,
   log_out,
-  log_in
+  log_in,
+  get_user
 }
