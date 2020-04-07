@@ -50,8 +50,8 @@ export default () => {
     post_container.setAttribute('class', 'post_container')
     post_container.appendChild(post_textarea)
 
-    const btn_guardar = document.createElement('a')
-    btn_guardar.setAttribute('class', 'btn_guardar')
+    const btn_guardar = document.createElement('button')
+    btn_guardar.setAttribute('class', 'btn_post')
     btn_guardar.innerHTML = 'Send'
     btn_guardar.addEventListener('click', () => (createpost(post_textarea.value)))
  

@@ -11,7 +11,8 @@ const createpost = (text) => {
     const f = new Date();
     const datepost = f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear();
     firebase.firestore().collection("posts").add({
-            userId: user.uid,
+            useremail: user.email,
+            userid: user.uid,
             texts: text,
             date: datepost,
 
@@ -34,12 +35,12 @@ const historypost = () => {
             containerPosts.innerHTML += `
                  <ul>
                  
-                 <div class='post'>
+                 <div class='post_history'>
                    <div class='post_titulo'>
-                     <div class='post_name'> nameUS</div>
-                     <div class='post_date'> dia</div>
+                     <h1 class='post_name'> nameUS</h1>
+                     <p class='post_date'> dia </p>
                    </div>
-                   <div class='post_container'> container</div>
+                   <div class='post_textarea '> container</div>
                    <div class='post_footer'>
                      <button class='btn_post'> Edit</button>
                      <button class='btn_post'> Delete </button>

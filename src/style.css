@@ -51,7 +51,7 @@
   color: #8892b3
 }
 
-/* postss*/
+/* Nuevo postss*/
 .post {
   padding: 2%;
   margin: 5px;
@@ -72,24 +72,23 @@
   line-height: 0.1;
   color: #5a658c;
   font-size: 13px;
-  border-radius: 8px;
+  
 }
-
 
 .post_container {
   padding: 1%;
   height: 50%;
   width: auto;
   display: flex;
-  align-items: strech;
+  align-items: stretch;
 }
-
 .post_textarea {
   height: 150px;
   width: 100%;
   font-size: 15px;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 4px solid #e1e8ff;
+  background:white ;
 }
 
 .post_footer {
@@ -97,12 +96,18 @@
   color: #5a658c;
   font-size: 13px;
   display: flex;
+  justify-content: center;
   justify-content: space-between;
-  align-items: center;
-  height: 20px;
+  align-items: flex-end;
+  height: 10%;
 
 }
-
+.btn_post {
+  font-size: 15px;
+  color: #5a658c;
+  border-radius: 8px;
+  border: 1px solid #5a658c;
+}
 
 .containerPosts{
   height: auto;
@@ -110,6 +115,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
   border: 1px solid #5a658c;
 }
 .h_post{
@@ -126,9 +133,22 @@
   flex-direction: column;
   align-items: center;
 }
+.post_history{
+  padding: 4%;
+  margin: 5px;
+  background: #e1e8ff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70%;
+  width: 80%;
+  border-radius: 8px;
+  border: 1px solid #5a658c;
+}
 
+/**
 @media only screen and (max-width: 600px) {
-
+ 
   .divform {
     display: flex;
     flex-direction: column;
@@ -169,7 +189,7 @@
     color: #8892b3
   }
 
-  /*nuevo post */
+  /*nuevo post 
   .post {
     margin: 5px;
     padding: 2%;
@@ -221,4 +241,4 @@
 
   }
 
-}
+} */
