@@ -72,9 +72,20 @@
   line-height: 0.1;
   color: #5a658c;
   font-size: 13px;
-  
 }
 
+.post_name{
+  font-size: 19px;
+  color: #5a658c;
+  display: flex;
+  line-height: 0.1;
+  justify-content: space-between;
+}
+.post_date{
+  line-height: 0.1;
+  font-size: 13px;
+  color: #5a658c;
+}
 .post_container {
   padding: 1%;
   height: 50%;
@@ -89,6 +100,16 @@
   border-radius: 10px;
   border: 4px solid #e1e8ff;
   background:white ;
+}
+.p_texts{
+  height: 100px;
+  width: 100%;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 4px solid #e1e8ff;
+  background:white ;
+  text-align: center;
+
 }
 
 .post_footer {

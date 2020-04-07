@@ -1,13 +1,5 @@
-// import userMethod from '../config/setUp';
-// const  {  setUp: [{email_user = user.email}]  } = userMethod;
-//import { webhistory} from './history.js'
-//     dbFirebase
-// } from '../config/initFirebase.js'
-//crea nuevos posts
-//import date from '../views/home'
 const createpost = (text) => {
     const user = firebase.auth().currentUser
-    console.log(user)
     const f = new Date();
     const datepost = f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear();
     firebase.firestore().collection("posts").add({
@@ -26,50 +18,84 @@ const createpost = (text) => {
         })
 
 }
+
+function deletePost(postid) {
+    alert('Are you sure?')
+    //console.log("elimino este post"+ postid)
+    firebase.firestore().collection("posts").doc(postid).delete().then(function () {
+        //console.log("Document successfully deleted!");
+    }).catch(function (error) {
+        //console.error("Error removing document: ", error);
+    });
+}
+
+function editPost(postid) {   
+    console.log('quiero editarlo')
+    var washingtonRef = firebase.firestore().collection("posts").doc(postid);
+
+// Set the "capital" field of the city 'DC'
+return washingtonRef.update({
+    useremail: user.email,
+            userid: user.uid,
+            texts: text,
+            date: datepost,
+})
+.then(function() {
+    console.log("Document successfully updated!");
+})
+.catch(function(error) {
+    // The document probably doesn't exist.
+    console.error("Error updating document: ", error);
+});
+}
+
+
+//historypost home
 const historypost = () => {
     return firebase.firestore().collection("posts").onSnapshot((querySnapshot) => {
         containerPosts.innerHTML = ''
         querySnapshot.forEach((doc) => {
-            console.log(`${doc.id} => ${doc.data().texts}`);
+            console.log(` id post ${doc.id} texto del post ${doc.data().texts},  dia ${doc.data().date}
+             ,quien lo publico ${doc.data().useremail} , ${doc.data().userid}`);
 
-            containerPosts.innerHTML += `
-                 <ul>
-                 
-                 <div class='post_history'>
+            containerPosts.innerHTML += `<ul >
+                 <div class='post_history' data-postid='${doc.id}'>
                    <div class='post_titulo'>
-                     <h1 class='post_name'> nameUS</h1>
-                     <p class='post_date'> dia </p>
+                     <h1 class='post_name'>${doc.data().useremail} </h1> 
+                     <p class='post_date'>${doc.data().date} </p>
                    </div>
-                   <div class='post_textarea '> container</div>
-                   <div class='post_footer'>
-                     <button class='btn_post'> Edit</button>
-                     <button class='btn_post'> Delete </button>
-                   </div>
+                   <p class='p_texts '> ${doc.data().texts}</p>
+                   <span class='post_footer'>
+                     <button class='btn_edit'> Edit</button>
+                     <button class='btn_delete'> Delete </button>
+                   </span>
                  </div>
-               
-                     
                  </ul> `
+
         });
-        containerPosts.querySelectorAll('div').forEach((div) => {
-            div.addEventListener('click', (e) => {
-                const currDiv = e.target;
-                const postId = currDiv.dataset.postid;
-                alert(postId)
+        containerPosts.querySelectorAll('.btn_edit').forEach((button) => {
+            button.addEventListener('click', (e) => {
+                const currElem = e.target; //referencia a un objeto que lanzo el evento
+                const postId = currElem.closest('.post_history').dataset.postid; //
+                //alert(postId + 'quiero borrar')
+                editPost(postId)
             })
+
         })
+        containerPosts.querySelectorAll('.btn_delete').forEach((button) => {
+            button.addEventListener('click', (e) => {
+                const currElem = e.target; //referencia a un objeto que lanzo el evento
+                const postId = currElem.closest('.post_history').dataset.postid; //
+                //alert(postId + 'quiero borrar')
+                deletePost(postId)
+            })
+
+        })
+
     })
 }
 //webhistory()
 export default {
     createpost,
     historypost
-}
-
-
-
-
-{
-    /* <div class='h_post' data-postid='${doc.id}'>
-                         ${doc.id} ${doc.data().texts}
-                         </div> */
 }
