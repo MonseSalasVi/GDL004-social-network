@@ -14,11 +14,11 @@ const createpost = (text) => {
             document.getElementById('post_textarea').value = ''
         })
         .catch(function (error) {
-            console.error("Error adding document: ", error);
+           // console.error("Error adding document: ", error);
         })
 
 }
-
+//borrar post
 function deletePost(postid) {
     alert('Are you sure?')
     //console.log("elimino este post"+ postid)
@@ -28,26 +28,25 @@ function deletePost(postid) {
         //console.error("Error removing document: ", error);
     });
 }
+//editar post
+// function editPost(postid) {
+//     console.log('quiero editarlo')
+//     var washingtonRef = firebase.firestore().collection("posts").doc(postid);
 
-function editPost(postid) {   
-    console.log('quiero editarlo')
-    var washingtonRef = firebase.firestore().collection("posts").doc(postid);
-
-// Set the "capital" field of the city 'DC'
-return washingtonRef.update({
-    useremail: user.email,
-            userid: user.uid,
-            texts: text,
-            date: datepost,
-})
-.then(function() {
-    console.log("Document successfully updated!");
-})
-.catch(function(error) {
-    // The document probably doesn't exist.
-    console.error("Error updating document: ", error);
-});
-}
+//     return washingtonRef.update({
+//             useremail: user.email,
+//             userid: user.uid,
+//             texts: text,
+//             date: datepost,
+//         })
+//         .then(function () {
+//             console.log("Document successfully updated!");
+//         })
+//         .catch(function (error) {
+//             // The document probably doesn't exist.
+//             console.error("Error updating document: ", error);
+//         });
+// }
 
 
 //historypost home
@@ -64,7 +63,7 @@ const historypost = () => {
                      <h1 class='post_name'>${doc.data().useremail} </h1> 
                      <p class='post_date'>${doc.data().date} </p>
                    </div>
-                   <p class='p_texts '> ${doc.data().texts}</p>
+                   <p class='p_texts'> ${doc.data().texts} </p>
                    <span class='post_footer'>
                      <button class='btn_edit'> Edit</button>
                      <button class='btn_delete'> Delete </button>
@@ -75,10 +74,18 @@ const historypost = () => {
         });
         containerPosts.querySelectorAll('.btn_edit').forEach((button) => {
             button.addEventListener('click', (e) => {
+
                 const currElem = e.target; //referencia a un objeto que lanzo el evento
-                const postId = currElem.closest('.post_history').dataset.postid; //
+                const wrapperPostElm = currElem.closest('.post_history');
+                const postId = wrapperPostElm.dataset.postid;
+                const text = wrapperPostElm.querySelector('.p_texts').textContent
+                //const editext = currElem.closest('.p_texts').dataset.editid
+                //const textedit = currElem.closest('.p_texts').dataset.text;
                 //alert(postId + 'quiero borrar')
-                editPost(postId)
+                //editPost(postId)
+                console.log( postId + text)
+
+               // window.location.hast = '/note/5897'
             })
 
         })
@@ -87,7 +94,8 @@ const historypost = () => {
                 const currElem = e.target; //referencia a un objeto que lanzo el evento
                 const postId = currElem.closest('.post_history').dataset.postid; //
                 //alert(postId + 'quiero borrar')
-                deletePost(postId)
+                deletePost(postId,)
+               
             })
 
         })
