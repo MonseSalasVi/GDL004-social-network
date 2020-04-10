@@ -1,6 +1,11 @@
 import postMethod from '../database/post.js';
-const  {createpost, historypost} = postMethod;
-import {get_user}  from '../auth/signup.js'
+const {
+    createpost,
+    historypostHome
+} = postMethod;
+import {
+    get_user
+} from '../auth/signup.js'
 //import email_user from '../aut'
 
 
@@ -22,8 +27,6 @@ export default () => {
     menu.appendChild(li_)
     menu.appendChild(li_1)
 
-
-
     //name
     const post_name = document.createElement('h1')
     post_name.innerHTML = 'email_user'
@@ -36,7 +39,7 @@ export default () => {
             post_name.innerHTML = user.email;
             post_titulo.appendChild(post_name)
         }
- 
+
     })
 
     //textarea
@@ -51,21 +54,20 @@ export default () => {
     post_container.appendChild(post_textarea)
 
     const btn_guardar = document.createElement('button')
-    btn_guardar.setAttribute('class', 'btn_guardar')
+    btn_guardar.setAttribute('class', 'btn_post')
     btn_guardar.innerHTML = 'Send'
     btn_guardar.addEventListener('click', () => (createpost(post_textarea.value)))
- 
+
     const post_footer = document.createElement('div')
     post_footer.setAttribute('class', 'post_footer')
-    
 
     post_footer.appendChild(btn_guardar)
 
     const containerPosts = document.createElement('li')
-    containerPosts.setAttribute('id','containerPosts')
-    containerPosts.setAttribute('class','containerPosts')
-    historypost()
-    
+    containerPosts.setAttribute('id', 'containerPosts')
+    containerPosts.setAttribute('class', 'containerPosts')
+    historypostHome()
+
     //div post 
     const post = document.createElement('div')
     post.setAttribute('class', 'post')
@@ -82,7 +84,7 @@ export default () => {
     containerHome.appendChild(menu)
     containerHome.appendChild(post)
     containerHome.appendChild(containerPosts)
-    
-    
+
+
     return containerHome;
 }

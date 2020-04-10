@@ -48,11 +48,9 @@
      list_logIn.innerHTML = 'Log In'
 
      //error
-     // const diverror = document.createElement("span")
-     //  diverror.setAttribute("id", "formError")
-     //text error
      const spanerror = document.createElement("span")
      spanerror.setAttribute("id", "formError")
+
      //almacenando todo
      const divform = document.createElement('div')
      divform.setAttribute('class', 'divform')
@@ -62,6 +60,7 @@
      divform.appendChild(count_password)
      divform.appendChild(spanerror)
      divform.appendChild(divbtn)
+     
      // contenedorr
      const containerForm = document.createElement("section");
      containerForm.setAttribute('class', "formCount")

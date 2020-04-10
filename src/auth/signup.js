@@ -18,13 +18,10 @@ const createUser = (e) => {
   }
 
   firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then(function (res) {
-      //console.log(res, 'Hola')
-    })
+    .then(function (res) {})
     .catch(function (error) {
       let errorCode = error.code;
       let errorMessage = error.message;
-      //console.log(errorCode, errorMessage)
     })
 
 }
@@ -54,7 +51,7 @@ const log_out = (e) => {
     .catch(function (error) {})
 }
 
-function get_user(cb){
+function get_user(cb) {
   firebase.auth().onAuthStateChanged((user) => {
     cb(user);
   });

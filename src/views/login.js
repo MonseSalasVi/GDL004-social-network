@@ -30,7 +30,7 @@ export default () => {
     const divbtn = document.createElement('div')
     divbtn.setAttribute('class', 'divbtns')
     divbtn.appendChild(btnLI)
-    
+
     //div para crear cuenta
     const text = document.createElement('p')
     text.innerHTML = 'Not a member?'
@@ -64,11 +64,8 @@ export default () => {
     const containerForm = document.createElement("section");
     containerForm.setAttribute('class', "formCount")
 
-
-
     containerForm.appendChild(header)
     containerForm.appendChild(divform)
-
     containerForm.appendChild(divText)
 
 

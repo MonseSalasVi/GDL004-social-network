@@ -7,17 +7,17 @@ const createpost = (text) => {
             userid: user.uid,
             texts: text,
             date: datepost,
-
         })
         .then(function (docRef) {
             console.log("Document written with ID: ", docRef.id);
             document.getElementById('post_textarea').value = ''
         })
         .catch(function (error) {
-           // console.error("Error adding document: ", error);
+            // console.error("Error adding document: ", error);
         })
 
 }
+
 //borrar post
 function deletePost(postid) {
     alert('Are you sure?')
@@ -28,34 +28,41 @@ function deletePost(postid) {
         //console.error("Error removing document: ", error);
     });
 }
+
 //editar post
-// function editPost(postid) {
-//     console.log('quiero editarlo')
-//     var washingtonRef = firebase.firestore().collection("posts").doc(postid);
+function editPost(postid, textedit) {
+    console.log('quiero editarlo')
+    document.getElementById('post_textarea').value = textedit
+    const btneditar = document.getElementById('btn_editar')
+    btneditar.innerHTML = 'Save'
 
-//     return washingtonRef.update({
-//             useremail: user.email,
-//             userid: user.uid,
-//             texts: text,
-//             date: datepost,
-//         })
-//         .then(function () {
-//             console.log("Document successfully updated!");
-//         })
-//         .catch(function (error) {
-//             // The document probably doesn't exist.
-//             console.error("Error updating document: ", error);
-//         });
-// }
+    btneditar.addEventListener('click', edit)
+
+    function edit() {
+        const washingtonRef = firebase.firestore().collection("posts").doc(postid);
+        const textoEditado = document.getElementById('post_textarea').value
+        return washingtonRef.update({
+                // useremail: user.email,
+                // userid: user.uid,
+                texts: textoEditado,
+                //date: datepost,
+            })
+            .then(function () {
+                console.log("Document successfully updated!");
+            })
+            .catch(function (error) {
+                // The document probably doesn't exist.
+                console.error("Error updating document: ", error);
+            });
+    }
+}
 
 
-//historypost home
+//historypost Profile !! donde pueden editar o eliminar sus posts
 const historypost = () => {
     return firebase.firestore().collection("posts").onSnapshot((querySnapshot) => {
         containerPosts.innerHTML = ''
         querySnapshot.forEach((doc) => {
-            console.log(` id post ${doc.id} texto del post ${doc.data().texts},  dia ${doc.data().date}
-             ,quien lo publico ${doc.data().useremail} , ${doc.data().userid}`);
 
             containerPosts.innerHTML += `<ul >
                  <div class='post_history' data-postid='${doc.id}'>
@@ -79,13 +86,7 @@ const historypost = () => {
                 const wrapperPostElm = currElem.closest('.post_history');
                 const postId = wrapperPostElm.dataset.postid;
                 const text = wrapperPostElm.querySelector('.p_texts').textContent
-                //const editext = currElem.closest('.p_texts').dataset.editid
-                //const textedit = currElem.closest('.p_texts').dataset.text;
-                //alert(postId + 'quiero borrar')
-                //editPost(postId)
-                console.log( postId + text)
-
-               // window.location.hast = '/note/5897'
+                editPost(postId, text)
             })
 
         })
@@ -94,16 +95,38 @@ const historypost = () => {
                 const currElem = e.target; //referencia a un objeto que lanzo el evento
                 const postId = currElem.closest('.post_history').dataset.postid; //
                 //alert(postId + 'quiero borrar')
-                deletePost(postId,)
-               
+                deletePost(postId)
+
             })
 
         })
 
     })
 }
-//webhistory()
+//historia del home, sin botones de editar y eliminar
+const historypostHome = () => {
+    return firebase.firestore().collection("posts").onSnapshot((querySnapshot) => {
+        containerPosts.innerHTML = ''
+        querySnapshot.forEach((doc) => {
+            // console.log(` id post ${doc.id} texto del post ${doc.data().texts},  dia ${doc.data().date}
+            //      ,quien lo publico ${doc.data().useremail} , ${doc.data().userid}`);
+
+            containerPosts.innerHTML += `<ul >
+                     <div class='post_history' data-postid='${doc.id}'>
+                       <div class='post_titulo'>
+                         <h1 class='post_name'>${doc.data().useremail} </h1> 
+                         <p class='post_date'>${doc.data().date} </p>
+                       </div>
+                       <p class='p_texts'> ${doc.data().texts} </p>
+                     </div>
+                     </ul> `
+
+        });
+    })
+}
+
 export default {
     createpost,
-    historypost
+    historypost,
+    historypostHome
 }
