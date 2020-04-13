@@ -17,26 +17,17 @@ Puede utilizarse para:
 El objetivo de este proyecto es construir una Red Social, Single-Page Application (SPA), responsiva en la que podamos escribir, leer, actualizar y eliminar datos.
 
 
-### Planificación
-
-* Para gestionar la planificación de mi proyecto utilice trello.
-
-* Dando tareas especificas para mi proyecto, con ayuda de Historias de Usuario,
-
-* **Priorizar** la implementación de tus funcionalidades, en función al esfuerzo que demandan en relación al valor que le aportan al usuario, y ejecutar en equipo todas las historias de usuario dentro del tiempo estimado para cada sprint y que finalmente se vean reflejadas en publicaciones completamentamente funcionales al final de cada sprint.
-
-
 ### Desarrollo frontend
 
 #### Arquitectura de la aplicación
 
 - Vista SignUp
 El usuario puede Registrarse.
-([Vista escritorio]() [Vista celular]())
+([Vista escritorio](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/signup.png) [Vista celular](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/signupVC.png))
 
 - Vista Login 
 El usuario puede entrar con su cuenta.
- ([vista escritorio]() y [vista celular]())
+ ([vista escritorio](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/singin.png) y [vista celular](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/signinVC.png))
 
 - Vista Home
 El usuario observa los posts de todos.
@@ -58,6 +49,14 @@ Automaticamente los datos se agregaran al area de post y desde ahi editar, se ag
 El usuario puede cerrar sesion en la vista de perfil.
 ([Vista escritorio]() [Vista celular]())
 
+
+### Planificación
+
+* Para gestionar la planificación de mi proyecto utilice trello.
+
+* Dando tareas especificas para mi proyecto, con ayuda de Historias de Usuario,
+
+* **Priorizar** la implementación de tus funcionalidades, en función al esfuerzo que demandan en relación al valor que le aportan al usuario, y ejecutar en equipo todas las historias de usuario dentro del tiempo estimado para cada sprint y que finalmente se vean reflejadas en publicaciones completamentamente funcionales al final de cada sprint.
 #### Tecnologías HTML5 y CSS3/SASS
 
 * Aplicar HTML5 semántico en tu proyecto.
