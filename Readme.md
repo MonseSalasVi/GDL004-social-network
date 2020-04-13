@@ -24,36 +24,35 @@ El objetivo de este proyecto es construir una Red Social, Single-Page Applicatio
 - Vista SignUp
 El usuario puede Registrarse.
 Vista escritorio
-![Vista escritorio](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/signup.png) 
-Vista Celular
-![Vista celular](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/signupVC.png)
+![SignUp](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/signup.png) 
+
 
 - Vista Login 
 El usuario puede entrar con su cuenta.
 Vista escritorio
- ![vista escritorio](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/singin.png)  
- Vista Celular
- ![vista celular](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/signinVC.png)
+ ![LogIn](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/singin.png)  
+ 
 
 - Vista Home
 El usuario observa los posts de todos.
-![Vista escritorio]() ![Vista celular]()
-
-- Vista Profile
-El usuario solo ve sus posts. Aqui puede eliminar y ediar sus posts.
-([Vista escritorio]() [Vista celular]())
-
-- Eliminar un post
-Si el usuario quiere eliminar un post, saldra una alerta de confirmacion.
-([Vista escritorio]() [Vista celular]())
-
-- Editar un post
-Automaticamente los datos se agregaran al area de post y desde ahi editar, se agregara un boton podra guardar los cambios.
-([Vista escritorio]() [Vista celular]())
+![Vista Home](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/vistaHome.png)
 
 - Log out
 El usuario puede cerrar sesion en la vista de perfil.
-([Vista escritorio]() [Vista celular]())
+
+- Vista Profile
+El usuario solo ve sus posts. Aqui puede eliminar y ediar sus posts.
+![Vista Profile](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/vistaProfile.png)
+
+- Eliminar un post
+Si el usuario quiere eliminar un post, saldra una alerta de confirmacion.
+![eliminar post](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/alert-delete.png)
+
+- Editar un post
+Automaticamente los datos se agregaran al area de post y desde ahi editar, se agregara un boton podra guardar los cambios.
+![editar post](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/editpost.png)
+
+
 
 
 ### Planificación
