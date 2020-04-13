@@ -59,7 +59,7 @@ export default () => {
     divform.appendChild(password_SI)
     divform.appendChild(spanerror)
     divform.appendChild(divbtn)
-
+    //divform.appendChild(divText)
     //contenedor
     const containerForm = document.createElement("section");
     containerForm.setAttribute('class', "formCount")

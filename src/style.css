@@ -45,10 +45,8 @@
 .divText {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin-top: 20%;
-  color: #8892b3
+  align-items: center;
+  color: #8892b3;
 }
 
 /* Nuevo postss*/
@@ -143,6 +141,12 @@
 }
 
 .btn_edit {
+  font-size: 15px;
+  color: #5a658c;
+  border-radius: 8px;
+  border: 1px solid #5a658c;
+}
+.btn_editar {
   font-size: 15px;
   color: #5a658c;
   border-radius: 8px;
