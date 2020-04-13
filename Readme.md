@@ -32,13 +32,13 @@ Vista escritorio
 El usuario puede entrar con su cuenta.
 Vista escritorio
 
- ![LogIn](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/signin.png)  
+ ![LogIn](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/login.png)  
  
 
 - Vista Home :
 El usuario observa los posts de todos.
 
-![Vista Home](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/vistaHome.png)
+![Vista Home](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/home.png)
 
 - Log out :
 El usuario puede cerrar sesion en la vista de perfil.
@@ -46,7 +46,7 @@ El usuario puede cerrar sesion en la vista de perfil.
 - Vista Profile :
 El usuario solo ve sus posts. Aqui puede eliminar y ediar sus posts.
 
-![Vista Profile](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/vistaProfile.png)
+![Vista Profile](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/profile.png)
 
 - Eliminar un post :
 Si el usuario quiere eliminar un post, saldra una alerta de confirmacion.
@@ -56,10 +56,17 @@ Si el usuario quiere eliminar un post, saldra una alerta de confirmacion.
 - Editar un post :
 Automaticamente los datos se agregaran al area de post y desde ahi editar, se agregara un boton podra guardar los cambios.
 
-![editar post](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/editarpost.png)
+![editar post]()
 
 
+#### Vista celular
+- Log in y Sign up :
 
+![vistacelular](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/vcsignupin.png)
+
+- Home y Profile :
+
+![vistacelular](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/vchomeprofile.png)
 
 ### Planificación
 
@@ -67,7 +74,12 @@ Automaticamente los datos se agregaran al area de post y desde ahi editar, se ag
 
 * Dando tareas especificas para mi proyecto, con ayuda de Historias de Usuario,
 
-* **Priorizar** la implementación de tus funcionalidades, en función al esfuerzo que demandan en relación al valor que le aportan al usuario, y ejecutar en equipo todas las historias de usuario dentro del tiempo estimado para cada sprint y que finalmente se vean reflejadas en publicaciones completamentamente funcionales al final de cada sprint.
+![trello](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/trello.png)
+
+* Paleta de colores
+
+![colores](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/paleta%20de%20colores.png)
+
 #### Tecnologías HTML5 y CSS3/SASS
 
 * Aplicar HTML5 semántico en tu proyecto.
