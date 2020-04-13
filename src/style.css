@@ -161,7 +161,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  border: 1px solid #5a658c;
+  /* border: 1px solid #5a658c; */
 }
 
 .h_post {
@@ -353,7 +353,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    border: 1px solid 5a658c;
+    /* border: 1px solid 5a658c; */
   }
   
   .h_post {
