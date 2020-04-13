@@ -24,33 +24,34 @@ El objetivo de este proyecto es construir una Red Social, Single-Page Applicatio
 - Vista SignUp
 El usuario puede Registrarse.
 Vista escritorio
-![SignUp](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/signup.png) 
+![SignUp]() 
 
 
 - Vista Login 
 El usuario puede entrar con su cuenta.
 Vista escritorio
- ![LogIn](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/singin.png)  
+ ![LogIn]()  
  
 
 - Vista Home
 El usuario observa los posts de todos.
-![Vista Home](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/vistaHome.png)
+![Vista Home]()
 
 - Log out
 El usuario puede cerrar sesion en la vista de perfil.
 
 - Vista Profile
 El usuario solo ve sus posts. Aqui puede eliminar y ediar sus posts.
-![Vista Profile](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/vistaProfile.png)
+![Vista Profile]()
 
 - Eliminar un post
 Si el usuario quiere eliminar un post, saldra una alerta de confirmacion.
-![eliminar post](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/alert-delete.png)
+![eliminar post]()
 
 - Editar un post
 Automaticamente los datos se agregaran al area de post y desde ahi editar, se agregara un boton podra guardar los cambios.
-![editar post](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/editpost.png)
+
+![editar post]()
 
 
 
