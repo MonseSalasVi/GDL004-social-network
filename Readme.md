@@ -23,15 +23,15 @@ El objetivo de este proyecto es construir una Red Social, Single-Page Applicatio
 
 - Vista SignUp
 El usuario puede Registrarse.
-![Vista escritorio](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/signup.png) [Vista celular](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/signupVC.png)
+[Vista escritorio](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/signup.png) ![Vista celular](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/signupVC.png)
 
 - Vista Login 
 El usuario puede entrar con su cuenta.
- ![vista escritorio](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/singin.png) y [vista celular](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/signinVC.png)
+ ![vista escritorio](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/singin.png) y ![vista celular](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/signinVC.png)
 
 - Vista Home
 El usuario observa los posts de todos.
-([Vista escritorio]() [Vista celular]())
+![Vista escritorio]() ![Vista celular]()
 
 - Vista Profile
 El usuario solo ve sus posts. Aqui puede eliminar y ediar sus posts.
