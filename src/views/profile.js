@@ -56,11 +56,15 @@ export default () => {
 
     const btn_guardar = document.createElement('button')
     btn_guardar.setAttribute('class', 'btn_delete')
+    btn_guardar.setAttribute('id', 'btn_guardar')
     btn_guardar.innerHTML = 'Send'
     btn_guardar.addEventListener('click', () => (createpost(post_textarea.value)))
     const btn_editar = document.createElement('button')
     btn_editar.setAttribute('id', 'btn_editar')
     btn_editar.setAttribute('class', 'btn_editar')
+    btn_editar.style.display = 'none';
+
+    
 
     //pie del post
     const post_footer = document.createElement('div')

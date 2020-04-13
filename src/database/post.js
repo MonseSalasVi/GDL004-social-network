@@ -2,6 +2,9 @@ const createpost = (text) => {
     const user = firebase.auth().currentUser
     const f = new Date();
     const datepost = f.getDate() + "/" + (f.getMonth() + 1) + "/" + f.getFullYear();
+    if(text === ''){
+        alert('You have not written a post')
+    } else {
     firebase.firestore().collection("posts").add({
             useremail: user.email,
             userid: user.uid,
@@ -9,13 +12,13 @@ const createpost = (text) => {
             date: datepost,
         })
         .then(function (docRef) {
-            console.log("Document written with ID: ", docRef.id);
+            //console.log("Document written with ID: ", docRef.id);
             document.getElementById('post_textarea').value = ''
         })
         .catch(function (error) {
             // console.error("Error adding document: ", error);
         })
-
+    }
 }
 
 //borrar post
@@ -31,11 +34,12 @@ function deletePost(postid) {
 
 //editar post
 function editPost(postid, textedit) {
-    console.log('quiero editarlo')
     document.getElementById('post_textarea').value = textedit
+    const btn_guardar = document.getElementById('btn_guardar')
+    btn_guardar.style.display = 'none'
     const btneditar = document.getElementById('btn_editar')
     btneditar.innerHTML = 'Save'
-
+    btneditar.style.display = 'inline';
     btneditar.addEventListener('click', edit)
 
     function edit() {
@@ -48,11 +52,14 @@ function editPost(postid, textedit) {
                 //date: datepost,
             })
             .then(function () {
-                console.log("Document successfully updated!");
+                //console.log("Document successfully updated!");
+                document.getElementById('post_textarea').value = ''
+                btneditar.style.display = 'none'
+                btn_guardar.style.display = 'inline'
             })
             .catch(function (error) {
                 // The document probably doesn't exist.
-                console.error("Error updating document: ", error);
+                //console.error("Error updating document: ", error);
             });
     }
 }
@@ -60,7 +67,12 @@ function editPost(postid, textedit) {
 
 //historypost Profile !! donde pueden editar o eliminar sus posts
 const historypost = () => {
-    return firebase.firestore().collection("posts").onSnapshot((querySnapshot) => {
+    const user = firebase.auth().currentUser
+    if(!user){
+        return;
+    }
+    
+    return firebase.firestore().collection("posts").where('userid','==',user.uid).onSnapshot((querySnapshot) => {
         containerPosts.innerHTML = ''
         querySnapshot.forEach((doc) => {
 
