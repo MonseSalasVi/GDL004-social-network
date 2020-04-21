@@ -77,7 +77,7 @@ Automaticamente los datos se agregaran al area de post y desde ahi editar, se ag
 ![trello](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/trello.png)
 
 * Paleta de colores
-
+n
 ![colores](https://raw.githubusercontent.com/MonseSalasVi/GDL004-social-network/monse-/src/img/paleta%20de%20colores.png)
 
 #### Tecnologías HTML5 y CSS3/SASS

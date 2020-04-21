@@ -12,11 +12,7 @@ const createpost = (text) => {
             date: datepost,
         })
         .then(function (docRef) {
-            //console.log("Document written with ID: ", docRef.id);
             document.getElementById('post_textarea').value = ''
-        })
-        .catch(function (error) {
-            // console.error("Error adding document: ", error);
         })
     }
 }
@@ -57,10 +53,7 @@ function editPost(postid, textedit) {
                 btneditar.style.display = 'none'
                 btn_guardar.style.display = 'inline'
             })
-            .catch(function (error) {
-                // The document probably doesn't exist.
-                //console.error("Error updating document: ", error);
-            });
+
     }
 }
 
@@ -69,7 +62,7 @@ function editPost(postid, textedit) {
 const historypost = () => {
     const user = firebase.auth().currentUser
     if(!user){
-        return;
+        return
     }
     
     return firebase.firestore().collection("posts").where('userid','==',user.uid).onSnapshot((querySnapshot) => {
